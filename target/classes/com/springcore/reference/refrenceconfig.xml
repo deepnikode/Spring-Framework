@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans 
+
+
+	xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd"
+    
+    >
+    
+    <bean class="com.springcore.reference.B"   name="refB" >
+    
+    <property name="y" value="90"/>
+    
+       
+    </bean>
+    
+    
+    <bean class="com.springcore.reference.A" name="refA">
+    
+    <property name="x" value="80"/>
+    
+    <property name="obj" ref="refB"/>
+    
+				    <!-- 
+				    Way-1  " ref as an Element "
+				       	<property name="obj" >
+				       	<ref bean="refB"/>
+				       	</property>
+				    -->
+				    				    
+				    <!-- 
+				    Way-2  " ref as an Attribute "
+				       	<property name="obj" ref="refB"/>
+				    -->
+				    
+				    <!-- 
+				    Way-3  " P Schema "
+				       	<bean class="com.springcore.reference.A" name="refA" p:x="10" p:obj-ref="refB" />	
+				    -->
+				    
+    </bean>
+    
+   
+
+</beans>   
