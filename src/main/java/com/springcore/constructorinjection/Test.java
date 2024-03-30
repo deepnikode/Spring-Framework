@@ -15,7 +15,9 @@ public class Test {
 		
 		
 		System.out.println(p);
-		
+
+		Addition a=(Addition)context.getBean("add");
+		a.doSum();
 	}
 
 }

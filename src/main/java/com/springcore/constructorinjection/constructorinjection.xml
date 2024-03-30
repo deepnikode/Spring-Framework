@@ -50,5 +50,18 @@
 	
 	
 	</bean>
+	
+	<bean class="com.springcore.constructorinjection.Addition" name="add">
+	
+	<constructor-arg value="34" type="int" index="1"/>
+		<constructor-arg value="6" type="int" index="0"/>
+	<!--
+			COSTUMIZING TECHNIQUES
+		
+		By using "type", we can resolve Ambiguiti problem
+		By using "index", we can set order of property/values
+		 -->
+	
+	</bean>
 
 </beans>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans 
+
+
+	xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    
+    xsi:schemaLocation=
+    
+    "http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+     <!-- BY NAME -->
+     <bean class="com.springcore.auto.wire.Address" name="address">
+     
+     <!--BY TYPE bean class="com.springcore.auto.wire.Address" name="addresso : for type example>:koi fark nhi padta:"-->
+     
+     
+     <property name="street" value="rehematnagarroad"/>
+     <property name="city" value="chandrapur"/>
+     
+     </bean>
+     
+     
+     <bean class="com.springcore.auto.wire.Emp" name="emp1" autowire="byName"/>
+     <!-- Search by the name and when it finds the similar variable name in its own class, 
+     	  it matches it with bean name in config file and then inject properties -->
+     
+     <!--
+     <bean class="com.springcore.auto.wire.Emp" name="emp1" autowire="byType"/>
+      Search by the type and when it finds the variable of same type in its own class, it matches it with bean type in config file 
+      -->
+      
+      <!--      <bean class="com.springcore.auto.wire.Emp" name="emp1" autowire="constructor"/>
+    			Parameterized constructor will get called  
+      -->
+     
+     
+</beans>   
+

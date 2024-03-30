@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans 
+
+
+	xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    
+    xsi:schemaLocation=
+    
+    "http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+      <context:annotation-config/>  
+     
+    
+    <!--
+    
+    	Enabling Annotations
+    	
+    	 <context:annotation-config/>  
+    
+    	 Either use this by pressing "ctrl+shift+t" and search for CommonAnnotationBean, copy the path
+    	 and classname and create bean accordingly
+    	  
+	  <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean>
+			
+	-->
+	
+     <bean class="com.springcore.auto.wire.annotations.Address" name="address1">
+     
+     
+     
+     <property name="street" value="firststreet"/>
+     <property name="city" value="chandrapur"/>
+     
+     </bean>
+     
+     <bean class="com.springcore.auto.wire.annotations.Address" name="address2">
+     
+     
+     
+     <property name="street" value="secondtstreet"/>
+     <property name="city" value="nagpur"/>
+     
+     </bean>
+     
+     
+     
+     
+     <bean class="com.springcore.auto.wire.annotations.Emp" name="emp1"> 
+     
+     <!-- Reffering by my own // But you can use annotations to delegate the reponsiblity to IOC Cointainer
+     
+     <property name="address" ref="address"/>
+     
+     -->
+     
+     </bean>
+     
+     
+     
+     
+     
+    
+    
+    
+    
+    
+    
+
+	
+	
+	
+
+
+</beans>   
+
